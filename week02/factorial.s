@@ -21,7 +21,7 @@ loop_body:
 	mul	$t1, $t1, $t2
 
 loop_step:
-	add	$t1, $t1, 1
+	add	$t2, $t2, 1
 	b	loop_cond
 loop_end:
 	li	$v0, 4
@@ -29,7 +29,7 @@ loop_end:
 	syscall
 
 	li	$v0, 1
-	move	$a0, $t0
+	move	$a0, $t1
 	syscall
 
 	la	$v0, 11
